@@ -35,12 +35,13 @@ class XMLParser: NSObject, NSXMLParserDelegate {
         if elementName == "item" {
             weather = Weather()
         }
+        print("yes1")
         
         if elementName == "yweather:condition" {
             weather.descriptionOfConditions = attributeDict["text"]!
             weather.temp = attributeDict["temp"]!
         }
-        
+        print("yes2")        
         if elementName == "yweather:forecast" {
             var forecast = [String: String]()
             
